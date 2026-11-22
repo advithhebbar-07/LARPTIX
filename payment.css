@@ -1,0 +1,306 @@
+ 
+ /* ======================================
+   LARPTIX - PAYMENT PAGE
+====================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080808;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar {
+    min-height: 75px;
+    padding: 0 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #292929;
+}
+
+.navbar h2 {
+    font-size: 27px;
+    letter-spacing: 4px;
+}
+
+.navbar a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: white;
+}
+
+/* MAIN PAGE */
+
+.payment-page {
+    max-width: 1050px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.payment-page h1 {
+    font-size: 34px;
+    letter-spacing: 3px;
+}
+
+.subtitle {
+    color: #888;
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+
+/* PAYMENT LAYOUT */
+
+.payment-container {
+    display: grid;
+    grid-template-columns: 1.3fr 0.8fr;
+    gap: 25px;
+}
+
+/* PAYMENT METHODS */
+
+.payment-methods,
+.order-summary {
+    background: #111;
+    border: 1px solid #292929;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.payment-methods h2,
+.order-summary h2 {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+/* PAYMENT OPTIONS */
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px;
+    margin-bottom: 12px;
+    background: #1b1b1b;
+    border: 1px solid #333;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.payment-option:hover {
+    border-color: white;
+}
+
+.payment-option input {
+    accent-color: white;
+}
+
+.payment-option span:nth-child(3) {
+    flex: 1;
+}
+
+.payment-option:has(input:checked) {
+    border-color: white;
+    background: #252525;
+}
+
+/* PAYMENT ICONS */
+
+.payment-icon {
+    font-size: 23px;
+    width: 35px;
+    text-align: center;
+}
+
+.option-arrow {
+    color: #777;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.payment-option:hover .option-arrow {
+    color: white;
+    transform: translateX(5px);
+}
+
+/* PAYMENT INPUTS */
+
+#payment-fields {
+    margin-top: 25px;
+}
+
+#payment-fields label {
+    display: block;
+    color: #aaa;
+    font-size: 13px;
+    margin-bottom: 9px;
+}
+
+#payment-fields input,
+#payment-fields select {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    background: #202020;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 6px;
+    outline: none;
+}
+
+#payment-fields input:focus,
+#payment-fields select:focus {
+    border-color: white;
+}
+
+/* ORDER SUMMARY */
+
+.order-summary p {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    color: #999;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.order-summary p span {
+    color: white;
+    text-align: right;
+}
+
+#pay-screen {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* TOTAL AMOUNT */
+
+.amount {
+    border-top: 1px solid #444;
+    padding-top: 25px;
+    margin-top: 30px;
+    color: #999;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.amount h1 {
+    color: white;
+    font-size: 32px;
+    margin-top: 12px;
+}
+
+/* PAY BUTTON */
+
+#pay-button {
+    width: 100%;
+    padding: 16px;
+    margin-top: 25px;
+
+    background: white;
+    color: black;
+
+    border: 1px solid white;
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#pay-button:hover {
+    background: #bbb;
+    border-color: #bbb;
+}
+
+#pay-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* CANCEL PAYMENT BUTTON */
+
+#cancel-payment {
+    width: 100%;
+    padding: 15px;
+    margin-top: 12px;
+
+    background: transparent;
+    color: #aaa;
+
+    border: 1px solid #555;
+    border-radius: 6px;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#cancel-payment:hover {
+    background: white;
+    color: black;
+    border-color: white;
+}
+
+/* DEMO NOTE */
+
+.demo-note {
+    font-size: 10px !important;
+    color: #777 !important;
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 18px !important;
+}
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+
+    .payment-container {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-page h1 {
+        font-size: 27px;
+    }
+
+    .payment-methods,
+    .order-summary {
+        padding: 22px;
+    }
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .navbar h2 {
+        font-size: 22px;
+    }
+
+    .navbar a {
+        font-size: 11px;
+    }
+}

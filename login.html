@@ -1,0 +1,264 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | LARPTIX</title>
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <!-- LEFT CINEMATIC IMAGE -->
+        <div class="login-visual">
+
+            <div class="visual-content">
+                <h1>LARPTIX</h1>
+                <p>WHERE EVERY FRAME TELLS A STORY.</p>
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT LOGIN PANEL -->
+        <div class="login-panel">
+
+            <a href="index.html" class="back-home">
+                ← Back to Home
+            </a>
+
+            <div class="login-box">
+
+                <h2>Welcome to LARPTIX</h2>
+
+                <p class="subtitle">
+                    Your next cinematic experience awaits.
+                </p>
+
+
+                <!-- LOGIN / SIGNUP TABS -->
+                <div class="tabs">
+
+                    <button type="button" id="login-tab" class="active">
+                        LOGIN
+                    </button>
+
+                    <button type="button" id="signup-tab">
+                        SIGN UP
+                    </button>
+
+                </div>
+
+
+                <!-- LOGIN FORM -->
+                <form id="login-form">
+
+                    <label>Email or Mobile Number</label>
+
+                    <input
+                        type="text"
+                        id="login-identifier"
+                        placeholder="Enter email or mobile number"
+                        required
+                    >
+
+                    <label>Password</label>
+
+                    <div class="password-field">
+
+                        <input
+                            type="password"
+                            id="login-password"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="toggle-password"
+                            data-target="login-password"
+                            aria-label="Show password"
+                            aria-pressed="false"
+                        >
+                            SHOW
+                        </button>
+
+                    </div>
+
+
+                    <button type="submit" class="submit-btn">
+                        LOGIN
+                    </button>
+
+
+                    <div class="separator">
+                        OR CONTINUE WITH
+                    </div>
+
+
+                    <!-- GOOGLE -->
+                    <button type="button" class="social-btn" id="google-login">
+                        <span>🌐</span>
+                        Continue with Google
+                    </button>
+
+
+                    <!-- APPLE -->
+                    <button type="button" class="social-btn" id="apple-login">
+                        <span></span>
+                        Continue with Apple
+                    </button>
+
+
+                    <!-- MOBILE OTP -->
+                    <button type="button" class="social-btn" id="phone-login">
+                        <span>📱</span>
+                        Continue with Mobile Number
+                    </button>
+
+
+                    <!-- OTP SECTION -->
+                    <div id="phone-section" class="hidden">
+
+                        <label>Mobile Number</label>
+
+                        <input
+                            type="tel"
+                            id="phone-number"
+                            placeholder="Enter 10-digit mobile number"
+                            maxlength="10"
+                            inputmode="numeric"
+                        >
+
+                        <button type="button" class="submit-btn" id="send-otp">
+                            SEND OTP
+                        </button>
+
+
+                        <div id="otp-section" class="hidden">
+
+                            <p class="otp-message">
+                                Enter your verification code
+                            </p>
+
+                            <input
+                                type="text"
+                                id="otp-input"
+                                placeholder="Enter 6-digit OTP"
+                                maxlength="6"
+                                inputmode="numeric"
+                            >
+
+                            <button type="button" class="submit-btn" id="verify-otp">
+                                VERIFY OTP
+                            </button>
+
+                            <p id="demo-otp"></p>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+
+                <!-- SIGNUP FORM -->
+                <form id="signup-form" class="hidden">
+
+                    <label>Full Name</label>
+
+                    <input
+                        type="text"
+                        id="signup-name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+
+                    <label>Email or Mobile Number</label>
+
+                    <input
+                        type="text"
+                        id="signup-identifier"
+                        placeholder="Enter email or 10-digit number"
+                        required
+                    >
+
+
+                    <label>Password</label>
+
+                    <div class="password-field">
+
+                        <input
+                            type="password"
+                            id="signup-password"
+                            placeholder="Create a password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="toggle-password"
+                            data-target="signup-password"
+                            aria-label="Show password"
+                            aria-pressed="false"
+                        >
+                            SHOW
+                        </button>
+
+                    </div>
+
+
+                    <label>Confirm Password</label>
+
+                    <div class="password-field">
+
+                        <input
+                            type="password"
+                            id="confirm-password"
+                            placeholder="Confirm your password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="toggle-password"
+                            data-target="confirm-password"
+                            aria-label="Show password"
+                            aria-pressed="false"
+                        >
+                            SHOW
+                        </button>
+
+                    </div>
+
+
+                    <button type="submit" class="submit-btn">
+                        CREATE ACCOUNT
+                    </button>
+
+                </form>
+
+
+                <p class="terms">
+                    By continuing, you agree to LARPTIX's
+                    Terms and Conditions.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="login.js"></script>
+
+</body>
+</html>

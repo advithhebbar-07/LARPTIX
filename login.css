@@ -1,0 +1,305 @@
+ 
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #050505;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* MAIN LAYOUT */
+.login-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* LEFT VISUAL */
+ 
+/* LEFT CINEMATIC IMAGE */
+.login-visual {
+    width: 50%;
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.15),
+            rgba(0, 0, 0, 0.35)
+        ),
+        url("./img/login-hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: flex-start;
+    padding: 0;
+}
+
+/* IMAGE ALREADY CONTAINS LARPTIX BRANDING */
+.visual-content {
+    display: none;
+}
+
+
+/* RIGHT PANEL */
+.login-panel {
+    width: 50%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    position: relative;
+}
+
+.back-home {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-home:hover {
+    color: white;
+}
+
+/* LOGIN BOX */
+.login-box {
+    width: 100%;
+    max-width: 440px;
+}
+
+.login-box h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #999;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 35px;
+}
+
+/* TABS */
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #333;
+    margin-bottom: 25px;
+}
+
+.tabs button {
+    flex: 1;
+    padding: 14px;
+    background: transparent;
+    color: #888;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.tabs button.active {
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+.tabs button:hover {
+    color: white;
+}
+
+/* FORM */
+form label {
+    display: block;
+    color: #ccc;
+    font-size: 13px;
+    margin-bottom: 9px;
+}
+
+form input {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 22px;
+    background: #151515;
+    border: 1px solid #383838;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    outline: none;
+}
+
+form input:focus {
+    border-color: white;
+}
+
+form input::placeholder {
+    color: #777;
+}
+
+/* MAIN BUTTON */
+.submit-btn {
+    width: 100%;
+    padding: 17px;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #ccc;
+    transform: translateY(-2px);
+}
+
+/* SEPARATOR */
+.separator {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #777;
+    font-size: 11px;
+    margin: 25px 0;
+}
+
+.separator::before,
+.separator::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #333;
+}
+
+/* SOCIAL BUTTONS */
+.social-btn {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 12px;
+    background: #111;
+    color: white;
+    border: 1px solid #383838;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.social-btn:hover {
+    background: #222;
+    border-color: white;
+}
+
+.social-btn span {
+    margin-right: 10px;
+}
+
+/* PHONE OTP */
+#phone-section,
+#otp-section {
+    margin-top: 20px;
+}
+
+.otp-message {
+    color: #aaa;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+#demo-otp {
+    color: #aaa;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 12px;
+    letter-spacing: 3px;
+}
+
+/* TERMS */
+.terms {
+    color: #666;
+    font-size: 11px;
+    text-align: center;
+    margin-top: 25px;
+    line-height: 1.6;
+}
+
+/* HIDDEN ELEMENTS */
+.hidden {
+    display: none !important;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 800px) {
+    .login-visual {
+        display: none;
+    }
+
+    .login-panel {
+        width: 100%;
+        padding: 80px 25px 35px;
+    }
+
+    .back-home {
+        top: 25px;
+        left: 25px;
+    }
+
+    .login-box h2 {
+        font-size: 25px;
+    }
+}
+
+/* =====================================
+   PASSWORD SHOW / HIDE
+===================================== */
+
+.password-field {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.password-field input {
+    width: 100%;
+    padding-right: 75px;
+    margin-bottom: 0;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+
+    background: transparent;
+    border: none;
+
+    color: #999;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+    padding: 8px;
+
+    transition: 0.3s;
+}
+
+.toggle-password:hover {
+    color: white;
+}

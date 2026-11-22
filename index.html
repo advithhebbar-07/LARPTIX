@@ -1,0 +1,126 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LARPTIX | Movie Tickets</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+
+            <h1 class="logo">
+                LARP<span>TIX</span>
+            </h1>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#movies">Movies</a>
+                <a href="my-bookings.html">My Bookings</a>
+            </div>
+
+            <button class="login-btn" id="auth-btn">
+                Login
+            </button>
+
+        </nav>
+    </header>
+
+    <main id="home">
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <h2>LARPTIX</h2>
+
+                <p>YOUR LIFE HAS NO PLOT. OUR MOVIES DO.</p>
+
+                <a href="#movies" class="explore-btn">
+                    Explore Movies
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- MOVIES SECTION -->
+        <section class="movies" id="movies">
+
+            <h2>Now Showing</h2>
+
+            <div class="movie-container" id="movie-list">
+                <!-- Movie cards loaded through JavaScript -->
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- MOVIE DETAILS MODAL -->
+    <div class="movie-modal" id="movie-modal">
+
+        <div class="modal-content">
+
+            <button
+                class="close-modal"
+                onclick="closeMovie()">
+                &times;
+            </button>
+
+            <img
+                id="modal-image"
+                src=""
+                alt="Movie Poster">
+
+            <div class="modal-info">
+
+                <h2 id="modal-title"></h2>
+
+                <p id="modal-genre"></p>
+                <p id="modal-rating"></p>
+                <p id="modal-year"></p>
+                <p id="modal-duration"></p>
+                <p id="modal-language"></p>
+                <p id="modal-director"></p>
+                <p id="modal-cast"></p>
+                <p id="modal-description"></p>
+
+                <button
+                    id="modal-book-btn"
+                    class="explore-btn">
+                    Book Tickets
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <h2>LARPTIX</h2>
+
+        <p>YOUR LIFE HAS NO PLOT. OUR MOVIES DO.</p>
+
+        <p>© 2026 LARPTIX. ALL RIGHTS RESERVED.</p>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+
+</body>
+</html>

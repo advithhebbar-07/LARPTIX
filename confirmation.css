@@ -1,0 +1,444 @@
+ 
+ /* =====================================
+   LARPTIX - DIGITAL TICKET
+===================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    background-color: #080808;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.58),
+            rgba(0, 0, 0, 0.68)
+        ),
+        url("./img/larptix-watermark.png");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar {
+    min-height: 75px;
+    padding: 0 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    border-bottom: 1px solid #292929;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.navbar h2 {
+    font-size: 26px;
+    letter-spacing: 4px;
+}
+
+.navbar a,
+.navbar a:visited {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: white;
+}
+
+/* LOGIN / LOGOUT BUTTON */
+
+.navbar button {
+    padding: 11px 20px;
+
+    background: white;
+    color: black;
+
+    border: 1px solid white;
+
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar button:hover {
+    background: transparent;
+    color: white;
+}
+
+/* MAIN PAGE */
+
+.confirmation-page {
+    max-width: 750px;
+    margin: 55px auto;
+    padding: 0 20px;
+}
+
+/* SUCCESS MESSAGE */
+
+.success-message {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.success-icon {
+    width: 55px;
+    height: 55px;
+
+    border: 2px solid white;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+    margin: 0 auto 20px;
+}
+
+.success-message h1 {
+    font-size: 27px;
+    letter-spacing: 3px;
+}
+
+.success-message p {
+    color: #aaa;
+    margin-top: 12px;
+}
+
+.ticket-message {
+    margin-bottom: 8px;
+}
+
+.larp-reminder {
+    margin-top: 0;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #aaa;
+}
+
+/* TICKET */
+
+.ticket {
+    background: #f1f1f1;
+    color: #111;
+
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* TICKET HEADER */
+
+.ticket-header {
+    background: #fff;
+
+    padding: 25px 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 2px dashed #bbb;
+}
+
+.ticket-header h2 {
+    font-size: 27px;
+    letter-spacing: 5px;
+}
+
+.ticket-header span {
+    border: 1px solid #111;
+    padding: 9px 12px;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* MOVIE INFORMATION */
+
+.ticket-movie {
+    padding: 30px 35px;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    border-bottom: 2px dashed #bbb;
+}
+
+.ticket-movie img {
+    width: 115px;
+    height: 155px;
+
+    object-fit: cover;
+    border-radius: 6px;
+
+    background: #ccc;
+}
+
+.small-label {
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.ticket-movie h2 {
+    font-size: 24px;
+    margin-bottom: 9px;
+}
+
+#ticket-genre {
+    color: #666;
+    font-size: 13px;
+}
+
+/* TICKET DETAILS */
+
+.ticket-details {
+    padding: 30px 35px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+
+    border-bottom: 2px dashed #bbb;
+}
+
+.ticket-details h3 {
+    font-size: 17px;
+    overflow-wrap: anywhere;
+}
+
+#ticket-screen {
+    letter-spacing: 1px;
+}
+
+/* TICKET FOOTER */
+
+.ticket-footer {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.booking-label {
+    color: #777;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.ticket-footer #ticket-id {
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin: 12px 0 25px;
+    overflow-wrap: anywhere;
+}
+
+/* BRANDING */
+
+.brand-divider {
+    width: 65px;
+    height: 1px;
+    background: #aaa;
+    margin: 0 auto 20px;
+}
+
+.ticket-brand {
+    font-size: 29px;
+    letter-spacing: 7px;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 8px;
+}
+
+.brand-tagline {
+    color: #777;
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-bottom: 23px;
+}
+
+.ticket-note {
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+/* ACTION BUTTONS */
+
+.ticket-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.ticket-actions button,
+.ticket-actions a {
+    display: inline-block;
+
+    padding: 15px 25px;
+
+    background: white;
+    color: black;
+
+    border: 1px solid white;
+    border-radius: 0;
+
+    text-decoration: none;
+    text-align: center;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.ticket-actions button:hover,
+.ticket-actions a:hover {
+    background: transparent;
+    color: white;
+}
+
+/* MOBILE */
+
+@media (max-width: 550px) {
+
+    .navbar {
+        padding: 0 5%;
+        gap: 12px;
+    }
+
+    .navbar h2 {
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+
+    .navbar a {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .navbar button {
+        padding: 9px 12px;
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .confirmation-page {
+        margin: 35px auto;
+        padding: 0 14px;
+    }
+
+    .success-message h1 {
+        font-size: 21px;
+    }
+
+    .ticket-header {
+        padding: 22px;
+    }
+
+    .ticket-header h2 {
+        font-size: 21px;
+    }
+
+    .ticket-header span {
+        font-size: 8px;
+    }
+
+    .ticket-movie {
+        padding: 22px;
+        gap: 17px;
+    }
+
+    .ticket-movie img {
+        width: 85px;
+        height: 120px;
+    }
+
+    .ticket-movie h2 {
+        font-size: 18px;
+    }
+
+    .ticket-details {
+        padding: 22px;
+        gap: 25px 15px;
+    }
+
+    .ticket-details h3 {
+        font-size: 14px;
+    }
+
+    .ticket-footer #ticket-id {
+        font-size: 17px;
+    }
+
+    .ticket-brand {
+        font-size: 25px;
+    }
+
+    .ticket-actions {
+        flex-direction: column;
+    }
+
+    .ticket-actions button,
+    .ticket-actions a {
+        width: 100%;
+    }
+}
+
+/* PRINT */
+
+@media print {
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .navbar,
+    .success-message,
+    .ticket-actions {
+        display: none !important;
+    }
+
+    .confirmation-page {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .ticket {
+        box-shadow: none;
+        border: 1px solid #ccc;
+        border-radius: 0;
+
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+}

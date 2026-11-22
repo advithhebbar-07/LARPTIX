@@ -1,0 +1,151 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Tickets | LARPTIX</title>
+
+    <link rel="stylesheet" href="booking.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <h2 class="logo">LARPTIX<span>.</span></h2>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#movies">Movies</a>
+            <a href="my-bookings.html">My Bookings</a>
+        </div>
+    </nav>
+
+    <main class="booking-page">
+
+        <h1>BOOK YOUR TICKETS</h1>
+        <p class="subtitle">Your movie experience starts here.</p>
+
+        <section class="booking-card">
+
+            <!-- MOVIE INFO -->
+            <div class="movie-info">
+                <h2 id="booking-movie">Loading movie...</h2>
+                <p id="booking-genre"></p>
+            </div>
+
+            <!-- DATE -->
+            <div class="booking-step">
+                <h3>01. Select Date</h3>
+                <input type="date" id="booking-date">
+            </div>
+
+            <!-- SCREEN SELECTION -->
+            <div class="booking-step">
+                <h3>02. Select Your Screen</h3>
+
+                <div class="screen-options">
+
+                    <button class="screen-option active"
+                        type="button"
+                        data-screen="standard">
+
+                        <span class="screen-number">SCREEN 01</span>
+                        <strong>STANDARD</strong>
+                        <span>48 Seats</span>
+                        <b>₹180 <small>/ seat</small></b>
+
+                    </button>
+
+                    <button class="screen-option"
+                        type="button"
+                        data-screen="premium">
+
+                        <span class="screen-number">SCREEN 02</span>
+                        <strong>PREMIUM</strong>
+                        <span>80 Seats</span>
+                        <b>₹250 <small>/ seat</small></b>
+
+                    </button>
+
+                    <button class="screen-option"
+                        type="button"
+                        data-screen="imax">
+
+                        <span class="screen-number">SCREEN 03</span>
+                        <strong>IMAX</strong>
+                        <span>120 Seats</span>
+                        <b>₹350 <small>/ seat</small></b>
+
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- SHOWTIME -->
+            <div class="booking-step">
+                <h3>03. Select Showtime</h3>
+
+                <div class="showtimes">
+                    <button class="time-btn" type="button" data-time="10:00 AM">10:00 AM</button>
+                    <button class="time-btn" type="button" data-time="1:30 PM">1:30 PM</button>
+                    <button class="time-btn" type="button" data-time="4:30 PM">4:30 PM</button>
+                    <button class="time-btn" type="button" data-time="7:30 PM">7:30 PM</button>
+                    <button class="time-btn" type="button" data-time="10:30 PM">10:30 PM</button>
+                </div>
+            </div>
+
+            <!-- SEATS -->
+            <div class="booking-step">
+                <h3>04. Choose Your Seats</h3>
+
+                <p class="screen-description" id="screen-description">
+                    STANDARD AUDITORIUM · 48 SEATS
+                </p>
+
+                <div class="seat-legend">
+                    <span><i class="seat available"></i> Available</span>
+                    <span><i class="seat selected"></i> Selected</span>
+                    <span><i class="seat occupied"></i> Occupied</span>
+                </div>
+
+                <div class="screen">
+                    <span id="screen-label">STANDARD SCREEN</span>
+                </div>
+
+                <div id="seat-layout" class="seat-layout"></div>
+            </div>
+
+            <!-- SUMMARY -->
+            <div class="booking-summary">
+
+                <h3>BOOKING SUMMARY</h3>
+
+                <p>Movie: <span id="summary-movie">-</span></p>
+                <p>Date: <span id="summary-date">-</span></p>
+                <p>Screen: <span id="summary-screen">Standard</span></p>
+                <p>Showtime: <span id="summary-time">-</span></p>
+                <p>Seats: <span id="summary-seats">None</span></p>
+                <p>Price per seat: ₹<span id="summary-price">180</span></p>
+
+                <div class="total">
+                    Total: ₹<span id="total-price">0</span>
+                </div>
+
+                <button id="confirm-booking" type="button">
+                    CONFIRM BOOKING
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="booking.js"></script>
+
+</body>
+</html>

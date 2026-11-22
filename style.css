@@ -1,0 +1,429 @@
+ 
+/* =====================================
+   LARPTIX - MONOCHROME CINEMATIC THEME
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    position: relative;
+    isolation: isolate;
+}
+
+/* =====================================
+   GLOBAL WATERMARK
+===================================== */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("./img/larptix-watermark.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.25;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* =====================================
+   NAVBAR
+===================================== */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 7%;
+    background: rgba(16, 16, 16, 0.92);
+    border-bottom: 1px solid #292929;
+}
+
+.logo {
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+}
+
+.logo span {
+    color: #999999;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #BBBBBB;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #FFFFFF;
+}
+
+.login-btn,
+.explore-btn {
+    display: inline-block;
+    background: #FFFFFF;
+    color: #080808;
+    border: none;
+    padding: 11px 23px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.login-btn:hover,
+.explore-btn:hover {
+    background: #BBBBBB;
+    transform: translateY(-2px);
+}
+
+/* =====================================
+   HERO SECTION
+===================================== */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 7%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.7)
+        ),
+        url("./img/movie-hero.webp");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h2 {
+    font-size: 80px;
+    letter-spacing: 12px;
+    margin-bottom: 18px;
+    color: #FFFFFF;
+}
+
+.hero-content p {
+    color: #CCCCCC;
+    margin-bottom: 25px;
+    font-size: 14px;
+    letter-spacing: 4px;
+}
+
+.explore-btn {
+    padding: 14px 30px;
+    font-size: 16px;
+}
+
+/* =====================================
+   MOVIE SECTION
+===================================== */
+
+.movies {
+    padding: 45px 7%;
+}
+
+.movies h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #FFFFFF;
+}
+
+.movie-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* =====================================
+   MOVIE CARDS
+===================================== */
+
+.movie-card {
+    background: rgba(21, 21, 21, 0.94);
+    border: 1px solid #303030;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.movie-card:hover {
+    transform: translateY(-8px);
+    border-color: #FFFFFF;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    display: block;
+}
+
+.movie-info {
+    padding: 16px;
+}
+
+.movie-info h3 {
+    margin-bottom: 8px;
+    color: #FFFFFF;
+}
+
+.movie-info p {
+    color: #AAAAAA;
+    font-size: 14px;
+    margin-top: 7px;
+    line-height: 1.5;
+}
+
+.movie-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.movie-bottom span {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.movie-bottom button {
+    background: #FFFFFF;
+    color: #000000;
+    border: none;
+    padding: 9px 13px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.movie-bottom button:hover {
+    background: #BBBBBB;
+}
+
+/* =====================================
+   MOVIE DETAILS MODAL
+===================================== */
+
+.movie-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    gap: 30px;
+    background: #151515;
+    border: 1px solid #333;
+    border-radius: 14px;
+    padding: 30px;
+    max-width: 850px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-content > img {
+    width: 260px;
+    max-height: 390px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.modal-info {
+    flex: 1;
+}
+
+.modal-info h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.modal-info p {
+    color: #BBBBBB;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+#modal-description {
+    margin-top: 20px;
+    color: #FFFFFF;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: #999;
+}
+
+/* =====================================
+   FOOTER - LARPTIX BRANDING
+===================================== */
+
+.footer {
+    width: 100%;
+    padding: 55px 20px 30px;
+    margin-top: 40px;
+    text-align: center;
+    background: rgba(12, 12, 12, 0.94);
+    border-top: 1px solid #333333;
+}
+
+.footer h2 {
+    font-size: 34px;
+    letter-spacing: 8px;
+    color: #FFFFFF;
+    margin-bottom: 14px;
+}
+
+.footer p {
+    color: #999999;
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.footer p:last-child {
+    color: #666666;
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-top: 25px;
+    margin-bottom: 0;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 800px) {
+
+    .movie-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        min-height: 60vh;
+    }
+
+    .hero-content h2 {
+        font-size: 48px;
+        letter-spacing: 6px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .modal-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 25px 18px;
+    }
+
+    .modal-content > img {
+        width: 180px;
+    }
+
+    .modal-info h2 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .movie-container {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 18px 5%;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .hero {
+        min-height: 50vh;
+        padding: 35px 7%;
+    }
+
+    .hero-content h2 {
+        font-size: 34px;
+        letter-spacing: 4px;
+    }
+
+    .hero-content p {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .footer {
+        padding: 40px 15px 25px;
+    }
+
+    .footer h2 {
+        font-size: 27px;
+        letter-spacing: 6px;
+    }
+
+    .footer p {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+}

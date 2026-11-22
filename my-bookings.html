@@ -1,0 +1,95 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Bookings | LARPTIX</title>
+
+    <link rel="stylesheet" href="my-bookings.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <a href="index.html" class="logo">LARP<span>TIX</span></a>
+
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="index.html#movies">MOVIES</a>
+            <a href="my-bookings.html" class="active">MY BOOKINGS</a>
+            <button id="auth-btn" class="login-btn">LOGIN</button>
+        </nav>
+
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+
+        <p class="eyebrow">YOUR CINEMA JOURNEY</p>
+
+        <h1>MY BOOKINGS</h1>
+
+        <p>Every movie experience, all in one place.</p>
+
+    </section>
+
+    <!-- BOOKING SECTION -->
+    <main class="booking-section">
+
+        <div class="booking-heading">
+
+            <div>
+                <p class="section-label">YOUR COLLECTION</p>
+                <h2>Your Tickets</h2>
+            </div>
+
+            <span id="booking-count">0 BOOKINGS</span>
+
+        </div>
+
+        <!-- BOOKING CARDS -->
+        <div id="booking-list"></div>
+
+        <!-- EMPTY STATE -->
+        <div id="empty-bookings" class="empty-state hidden">
+
+            <div class="empty-icon">🎬</div>
+
+            <p class="eyebrow">YOUR NEXT EXPERIENCE AWAITS</p>
+
+            <h2>No Bookings Yet</h2>
+
+            <p>
+                Looks like you haven't booked any movies yet.
+                Discover your next cinematic experience.
+            </p>
+
+            <a href="index.html#movies" class="browse-btn">
+                EXPLORE MOVIES
+            </a>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h2>LARPTIX.</h2>
+
+        <p>YOUR LIFE HAS NO PLOT. OUR MOVIES DO.</p>
+
+        <p>© 2026 LARPTIX. ALL RIGHTS RESERVED.</p>
+
+    </footer>
+
+    <script src="auth.js"></script>
+    <script src="my-bookings.js"></script>
+
+</body>
+</html>

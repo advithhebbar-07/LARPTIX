@@ -1,0 +1,156 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Ticket | LARPTIX</title>
+
+    <link rel="stylesheet" href="confirmation.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <h2>LARPTIX.</h2>
+
+        <a href="index.html">HOME</a>
+
+        <button id="auth-btn" type="button">
+            LOGIN
+        </button>
+
+    </nav>
+
+    <!-- CONFIRMATION PAGE -->
+    <main class="confirmation-page">
+
+        <!-- SUCCESS MESSAGE -->
+        <div class="success-message">
+
+            <div class="success-icon">✓</div>
+
+            <h1>BOOKING CONFIRMED</h1>
+
+            <p class="ticket-message">
+                Your tickets are ready. Enjoy the show!
+            </p>
+
+            <p class="larp-reminder">
+                DON'T FORGET TO LARP!!!
+            </p>
+
+        </div>
+
+        <!-- DIGITAL TICKET -->
+        <section class="ticket">
+
+            <!-- TICKET HEADER -->
+            <div class="ticket-header">
+
+                <h2>LARPTIX.</h2>
+
+                <span>OFFICIAL MOVIE TICKET</span>
+
+            </div>
+
+            <!-- MOVIE INFORMATION -->
+            <div class="ticket-movie">
+
+                <img id="ticket-poster" src="" alt="Movie Poster">
+
+                <div>
+
+                    <p class="small-label">MOVIE</p>
+
+                    <h2 id="ticket-movie-name">Movie Name</h2>
+
+                    <p id="ticket-genre"></p>
+
+                </div>
+
+            </div>
+
+            <!-- TICKET DETAILS -->
+            <div class="ticket-details">
+
+                <div>
+                    <p class="small-label">DATE</p>
+                    <h3 id="ticket-date">-</h3>
+                </div>
+
+                <div>
+                    <p class="small-label">SHOWTIME</p>
+                    <h3 id="ticket-time">-</h3>
+                </div>
+
+                <div>
+                    <p class="small-label">SCREEN</p>
+                    <h3 id="ticket-screen">-</h3>
+                </div>
+
+                <div>
+                    <p class="small-label">SEATS</p>
+                    <h3 id="ticket-seats">-</h3>
+                </div>
+
+                <div>
+                    <p class="small-label">PRICE PER SEAT</p>
+                    <h3 id="ticket-price">₹0</h3>
+                </div>
+
+                <div>
+                    <p class="small-label">TOTAL PAID</p>
+                    <h3 id="ticket-total">₹0</h3>
+                </div>
+
+            </div>
+
+            <!-- TICKET FOOTER -->
+            <div class="ticket-footer">
+
+                <p class="booking-label">BOOKING ID</p>
+
+                <h3 id="ticket-id">-</h3>
+
+                <div class="brand-divider"></div>
+
+                <h2 class="ticket-brand">LARPTIX.</h2>
+
+                <p class="brand-tagline">
+                    YOUR LIFE HAS NO PLOT. OUR MOVIES DO.
+                </p>
+
+                <p class="ticket-note">
+                    PLEASE ARRIVE 15 MINUTES BEFORE THE SHOW.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ACTION BUTTONS -->
+        <div class="ticket-actions">
+
+            <button onclick="window.print()">
+                PRINT TICKET
+            </button>
+
+            <a href="index.html">
+                BACK TO HOME
+            </a>
+
+        </div>
+
+    </main>
+
+    <!-- JAVASCRIPT -->
+    <script src="auth.js"></script>
+    <script src="confirmation.js"></script>
+
+</body>
+</html>

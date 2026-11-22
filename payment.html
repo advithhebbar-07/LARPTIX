@@ -1,0 +1,110 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Payment | LARPTIX</title>
+
+    <link rel="stylesheet" href="payment.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <h2>LARPTIX.</h2>
+
+        <a href="index.html">HOME</a>
+        <a href="login.html" id="auth-btn">LOGIN</a>
+    </nav>
+
+    <!-- PAYMENT PAGE -->
+    <main class="payment-page">
+
+        <h1>SECURE CHECKOUT</h1>
+        <p class="subtitle">Complete your movie booking.</p>
+
+        <div class="payment-container">
+
+            <!-- PAYMENT METHODS -->
+            <section class="payment-methods">
+
+                <h2>PAYMENT METHOD</h2>
+
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="UPI" checked>
+                    <span class="payment-icon">📱</span>
+                    <span>UPI Payment</span>
+                    <span class="option-arrow">→</span>
+                </label>
+
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="Credit / Debit Card">
+                    <span class="payment-icon">💳</span>
+                    <span>Credit / Debit Card</span>
+                    <span class="option-arrow">→</span>
+                </label>
+
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="Net Banking">
+                    <span class="payment-icon">🏦</span>
+                    <span>Net Banking</span>
+                    <span class="option-arrow">→</span>
+                </label>
+
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="Wallet">
+                    <span class="payment-icon">👛</span>
+                    <span>Digital Wallet</span>
+                    <span class="option-arrow">→</span>
+                </label>
+
+                <div id="payment-fields"></div>
+
+            </section>
+
+            <!-- ORDER SUMMARY -->
+            <section class="order-summary">
+
+                <h2>ORDER SUMMARY</h2>
+
+                <p>Movie <span id="pay-movie">-</span></p>
+                <p>Date <span id="pay-date">-</span></p>
+                <p>Showtime <span id="pay-time">-</span></p>
+                <p>Screen <span id="pay-screen">-</span></p>
+                <p>Seats <span id="pay-seats">-</span></p>
+
+                <div class="amount">
+                    TOTAL AMOUNT
+                    <h1>₹<span id="pay-total">0</span></h1>
+                </div>
+
+                <!-- PAY BUTTON -->
+                <button id="pay-button" type="button">
+                    PAY NOW
+                </button>
+
+                <!-- CANCEL BUTTON -->
+                <button id="cancel-payment" type="button">
+                    CANCEL PAYMENT
+                </button>
+
+                <p class="demo-note">
+                    DEMO PAYMENT · NO REAL MONEY WILL BE CHARGED
+                </p>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- JAVASCRIPT -->
+    <script src="auth.js"></script>
+    <script src="payment.js"></script>
+
+</body>
+</html>
